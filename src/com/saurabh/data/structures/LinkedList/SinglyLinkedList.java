@@ -1,10 +1,10 @@
 package com.saurabh.data.structures.LinkedList;
 
-public class SingleLinkedList {
+public class SinglyLinkedList {
 
 	private int length = 0;
 
-	public SingleLinkedList()
+	public SinglyLinkedList()
 	{
 		length = 0;
 	}

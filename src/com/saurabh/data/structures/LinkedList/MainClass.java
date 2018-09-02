@@ -6,7 +6,7 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		SingleLinkedList singlelinkedList = new SingleLinkedList();
+		SinglyLinkedList singlelinkedList = new SinglyLinkedList();
 		
 		ListNode node = new ListNode();
 		node.setData(4);
