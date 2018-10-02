@@ -33,25 +33,28 @@ public class MainClassForDLL {
 		doublyLL.iterateForward();
 		System.out.println(" ");
 		
-		/*
+	
 		//Remove from DLL Head
 		System.out.println(" ");
-		System.out.println("Removed Head Data: "+doublyLL.removeHead());
+		int data = doublyLL.removeHead();
+		System.out.println("Removed Head Data: "+data);
 		doublyLL.iterateForward();
 		System.out.println(" ");
 		
+	
 		//Remove from DLL Tail
 		System.out.println(" ");
 		System.out.println("Removed Tail Data: "+doublyLL.removeTail());
 		doublyLL.iterateForward();
 		System.out.println(" ");
 		
+		
 		//Remove element at given position
 		System.out.println(" ");
 		System.out.println("Removed Data at given position: 1 ");
 		doublyLL.remove(1);
 		doublyLL.iterateForward();
-		System.out.println(" ");*/
+		System.out.println(" ");
 		
 /*		System.out.println(" ");
 		System.out.println("Removed next data after DLL matched Data: 11");
@@ -68,13 +71,13 @@ public class MainClassForDLL {
 		System.out.println(" ");
 		System.out.println("Lengthy: "+doublyLL.length());*/
 		
-/*		System.out.println(" ");
+		System.out.println(" ");
 		System.out.println("Removed DLL matched Data: 2");
 		DLLNode node2 = new DLLNode(2);
 		doublyLL.removeMatched(node2);
 		doublyLL.iterateForward();
 		System.out.println(" ");
-		System.out.println("Lengthy: "+doublyLL.length());*/
+		System.out.println("Lengthy: "+doublyLL.length());
 		
 
 	}
