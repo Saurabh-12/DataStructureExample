@@ -1,8 +1,8 @@
-package com.saurabh.data.structures.Questions;
+package com.saurabh.data.structures.LinkedListQuestions;
 
 import java.util.HashSet;
 
-import com.saurabh.data.structures.Questions.FindNRemoveLoopInLinkedList.Node;
+import com.saurabh.data.structures.LinkedListQuestions.FindNRemoveLoopInLinkedList.Node;
 
 public class DetectLoopInLinkedList {
 	Node head;

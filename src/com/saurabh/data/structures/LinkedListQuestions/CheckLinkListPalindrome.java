@@ -1,4 +1,4 @@
-package com.saurabh.data.structures.Questions;
+package com.saurabh.data.structures.LinkedListQuestions;
 
 public class CheckLinkListPalindrome {
 	

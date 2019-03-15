@@ -1,4 +1,4 @@
-package com.saurabh.data.structures.Questions;
+package com.saurabh.data.structures.LinkedListQuestions;
 
 import java.util.HashMap;
 import java.util.HashSet;
