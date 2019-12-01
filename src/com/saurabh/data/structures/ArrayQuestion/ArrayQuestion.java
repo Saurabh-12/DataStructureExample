@@ -321,6 +321,8 @@ public void waveArray(int [] arr, int size)
 	}
 }
 
+//Q. 11.  Array
+
 private void swap(int[] arr, int i, int j) {
 	int temp;
 	temp = arr[i];
