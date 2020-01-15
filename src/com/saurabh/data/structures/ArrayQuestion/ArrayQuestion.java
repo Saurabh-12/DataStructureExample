@@ -306,19 +306,32 @@ public int smallestPositiveMissingNumber4(int []arr, int size)
 // i/p = {8,1,2,3,4,5,6,4,2}
 //o/p = {}
 
-public void waveArray(int [] arr, int size)
+public int[] waveArray(int [] arr, int size)
 {
-	//odd elements are lesser then even element
+	int []resultArr = arr;
+	//odd elements are lesser than even element
 	for(int i = 1; i <size; i+=2)
 	{
-		if((i-1)>=0 && arr[i]>arr[i-1]) {
-			swap(arr, i, i-1);
+		if((i-1)>=0 && resultArr[i]>resultArr[i-1]) {
+			 swap(resultArr, i, i-1);
 		}
-		if((i+1)<size && arr[i]>arr[i+1])
+		if((i+1)<size && resultArr[i]>resultArr[i+1])
 		{
-			swap(arr, i, i+1);
+			swap(resultArr, i, i+1);
 		}
 	}
+	return resultArr;
+}
+
+public int[] waveArrayUsingQuickSort(int arr[], int size)
+{
+	int [] resultarr = arr;
+	QuickSort sort = new QuickSort();
+	sort.sort(resultarr, 0, size-1);
+	for (int i = 0; i < size-1; i+=2) { 
+		swap(resultarr,i,i+1);
+	}
+	return resultarr;
 }
 
 //Q. 11.  Array

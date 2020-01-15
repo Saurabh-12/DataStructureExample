@@ -36,11 +36,20 @@ public class TestArrayQuestion {
 		System.out.println("missingValue "+missingValue);
 		arrQuestionObj.printArray(arr5);
 		
-		System.out.println("-------------------------------------");
+		System.out.println("---------------ArrayWave----------------------");
 		int arr6 [] = {8,1,2,3,4,5,6,4,2};
 		arrQuestionObj.printArray(arr6);
-		arrQuestionObj.waveArray(arr6, arr6.length);
-		arrQuestionObj.printArray(arr6);
+		int arrs [] = arrQuestionObj.waveArray(arr6, arr6.length);
+		arrQuestionObj.printArray(arrs);
+		
+		System.out.println("----------ArrayWave using Quicksort---------------------------");
+		int arr7 [] = {8,1,2,3,4,5,6,4,2};
+		QuickSort quicksort = new QuickSort();
+		quicksort.sort(arr7, 0, arr7.length-1);
+		arrQuestionObj.printArray(arr7);
+		 int [] arr8 = {8,1,2,3,4,5,6,4,2};
+		int arrsN [] = arrQuestionObj.waveArrayUsingQuickSort(arr8, arr8.length);
+		arrQuestionObj.printArray(arrsN);
 		
 		
 	}
