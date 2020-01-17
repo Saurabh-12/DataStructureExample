@@ -32,4 +32,9 @@ The last element inserted is the first one to be deleted/removed.(LIFO)
 	 pop-out from Empty Stacks = UnderFlow
 	 Push-in full stacks = over flow
 
-  
+# Java Collection API Example
+I have added Example of Java Collection Interface(<b>List, Set, Queue</b>) and MAP.  You can find all Example under  "com.saurbh.java.collections.example"
+-  List interface have <b>ArrayList</b> and <b>LinkedList</b> Class
+-  Set interface have <b>HashSet</b> , <b> LinkedHashSet</b> and <b>TreeSet</b> class
+-   Queue interface  have <b>ArrayDeque</b> and <b>PriorityQueue</b>class
+-  Map interface have <b>TreeMap</b> and <b>HashMap</b> class
