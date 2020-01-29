@@ -1,5 +1,5 @@
-# DataStructureExample
-My learning with Data structure 
+# DataStructure and Algo Example
+- DS and Algo example code for <a href="http://saurabhsharma123k.blogspot.com">My Blog</a>
 
 # Array Based interview question
 inside ArrayQuestion package you can find two java class.
@@ -38,3 +38,10 @@ I have added Example of Java Collection Interface(<b>List, Set, Queue</b>) and M
 -  Set interface have <b>HashSet</b> , <b> LinkedHashSet</b> and <b>TreeSet</b> class
 -   Queue interface  have <b>ArrayDeque</b> and <b>PriorityQueue</b>class
 -  Map interface have <b>TreeMap</b> and <b>HashMap</b> class
+
+# Algo Example
+I have added Sorting example inside below packge 
+- src.com.saurabh.algo.sorting
+- Bubble Sort
+- Insertion Sort
+- Selection Sort
