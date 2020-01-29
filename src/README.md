@@ -1,6 +1,6 @@
-# DataStructureExample
-My learning with Data structure 
+# DataStructure and Algo Example
 
+DS Example
 # Array Based interview question
 inside ArrayQuestion package you can find two java class.
  1. ArrayQuestion.java :- Contain all important question based on Array
@@ -39,6 +39,9 @@ I have added Example of Java Collection Interface(<b>List, Set, Queue</b>) and M
 -   Queue interface  have <b>ArrayDeque</b> and <b>PriorityQueue</b>class
 -  Map interface have <b>TreeMap</b> and <b>HashMap</b> class
 
-
-
-
+# Algo Example
+I have added Sorting example inside below packge 
+- src.com.saurabh.algo.sorting
+- Bubble Sort
+- Insertion Sort
+- Selection Sort
