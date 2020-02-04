@@ -34,14 +34,17 @@ The last element inserted is the first one to be deleted/removed.(LIFO)
 
 # Java Collection API Example
 I have added Example of Java Collection Interface(<b>List, Set, Queue</b>) and MAP.  You can find all Example under  "com.saurbh.java.collections.example"
--  List interface have <b>ArrayList</b> and <b>LinkedList</b> Class
--  Set interface have <b>HashSet</b> , <b> LinkedHashSet</b> and <b>TreeSet</b> class
--   Queue interface  have <b>ArrayDeque</b> and <b>PriorityQueue</b>class
--  Map interface have <b>TreeMap</b> and <b>HashMap</b> class
+
+- List interface have <b>ArrayList</b> and <b>LinkedList</b> Class
+- Set interface have <b>HashSet</b> , <b> LinkedHashSet</b> and <b>TreeSet</b> class
+- Queue interface  have <b>ArrayDeque</b> and <b>PriorityQueue</b>class
+- Map interface have <b>TreeMap</b> and <b>HashMap</b> class
 
 # Algo Example
-I have added Sorting example inside below packge 
-- src.com.saurabh.algo.sorting
+I have added Sorting example inside packge "<b>src.com.saurabh.algo.sorting</b>"
+
 - Bubble Sort
 - Insertion Sort
 - Selection Sort
+- Merge Sort
+- Quick Sort
