@@ -42,6 +42,34 @@ public class MergeSortExample {
 
     }
 
+private static void MergeSort2(int []input, int start, int end){
+    int mid = (start+end)/2;
+    if(start<end){
+        MergeSort2(input, start, mid);
+        MergeSort2(input, mid+1, end);
+    }
+
+    int i = 0, first = start, last = mid+1;
+    int temp [] = new int [end-start+1];
+
+    while (first<=mid && last <= end) {
+        temp[i++] = input[first]<input[last]? input[first++]:input[last++];
+    }
+
+    while(first<=mid){
+        temp[i++] = input[first++];
+    }
+    while(last<=end){
+        temp[i++] = input[last++];
+    }
+
+    i = 0;
+    while (start <= end) {
+        input[start++] = temp[i++];
+    }
+
+}
+
     public static void main(String[] args) {
         
         int [] arr = {3,4,2,1,6,5,7,8,1,1};
@@ -49,7 +77,8 @@ public class MergeSortExample {
         int [] tempArr = new int[size];
 
         //Sorting above aray using merge sort
-        mergeSort(arr, tempArr, 0,(size-1));
+    //    mergeSort(arr, tempArr, 0,(size-1));
+        MergeSort2(arr, 0, size-1);
         
         for (int i = 0; i < arr.length; i++) {
            System.out.print(arr[i]+" "); 
