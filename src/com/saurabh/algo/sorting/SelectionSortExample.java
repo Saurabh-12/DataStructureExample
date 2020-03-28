@@ -27,7 +27,7 @@ public class SelectionSortExample {
         int size = arr.length;
         int i, j, temp, min;
 
-        for(i = 0; i<(size-1);i++){
+        for(i = 0; i<(size);i++){
             min = i;
 
             for(j = i+1; j<size;j++){
@@ -42,6 +42,25 @@ public class SelectionSortExample {
         }
     }
 
+public static void revision1SelectionSot(int []arr){
+    int size = arr.length;
+    int min;
+    int temp;
+
+    for(int i = 0; i<size; i++){
+        min = i;
+
+        for (int j = i+1; j < size; j++) {
+            if(arr[j]>arr[min]){
+                min = j;
+            }
+            temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+        }
+    }
+
+}
 
     public static boolean more(int i, int j){
         return i>j;
@@ -59,6 +78,7 @@ public class SelectionSortExample {
         
         int arr2[] = {9,1,8,2,7,3,6,4,5};
         selectionSortDesending(arr2);
+        //revision1SelectionSot(arr2);
         for (int i = 0; i < arr2.length; i++) {
                 System.out.print(arr2[i]+" ");
         }
