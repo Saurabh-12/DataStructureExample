@@ -8,35 +8,40 @@ public static void quickSort1(int left, int right, int arr[])
     if(right-left<=0)
         return;
     else{
-        long pivot = arr[right];
+        long pivot = arr[right]; //right most item taken as pivot
+        //calculationg partion range
         int partition = partitionIt(left,right,pivot,arr);
+        //Left sorting
         quickSort1(left, partition-1, arr);
+        //Right sorting
         quickSort1(partition+1, right, arr);
     }
 }
 
 private static int partitionIt(int left, int right, long pivot, int []arr) {
-    int leftPtr = left-1;
-    int rightPtr = right;
+    int leftPtr = left-1; //left    (after ++)
+    int rightPtr = right; // right-1 (after --)
 
     while(true){
 
-        while(arr[++leftPtr]<pivot)
+        while(arr[++leftPtr]<pivot) // find bigger item
         {
             //nop
         }
-        while (rightPtr>0 && arr[--rightPtr]>pivot) {
+        while (rightPtr>0 && arr[--rightPtr]>pivot) //find smaller item
+        {
             //nop
         }
-        if(leftPtr>=rightPtr)
+        if(leftPtr>=rightPtr) //if pointers cross,
         {
-            break;
-        } else {
-            swap(arr,leftPtr,rightPtr);
+            break;            // partition done,
+        } else {             // not crossed, so
+            swap(arr,leftPtr,rightPtr); //swap element
         }
     }
-   swap(arr,leftPtr,right);
-    return leftPtr;
+
+   swap(arr,leftPtr,right);  // restore pivot
+    return leftPtr;          // return pivot location
 }
 
 
