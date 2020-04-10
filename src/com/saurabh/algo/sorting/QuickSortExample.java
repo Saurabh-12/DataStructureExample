@@ -36,9 +36,10 @@ public class QuickSortExample {
 
     public static void main(String[] args) {
         int arr[] = {3,4,2,1,6,5,7,8,1,1};
-        quickSort(arr, 0, arr.length-1);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]+" ");
+        int arrayE [] = {45,16,84,23,10,58,19,20,36,98};
+        quickSort(arrayE, 0, arrayE.length-1);
+        for (int i = 0; i < arrayE.length; i++) {
+            System.out.print(arrayE[i]+" ");
         }
         System.out.println("\n      ");
         
