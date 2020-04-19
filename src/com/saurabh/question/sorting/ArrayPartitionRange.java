@@ -12,12 +12,12 @@ public class ArrayPartitionRange {
         int start = 0;
         int end = arr.length - 1;
         int i = 0;
-        while (i <= end) {
+        while (i <end) {
             if (arr[i] < lowerRange) {
                 swap(arr, i, start);
                 i += 1;
                 start += 1;
-            } else if (arr[i] > higherRange) {
+            } else if (arr[i] >= higherRange) {
                 swap(arr, i, end);
                 end -= 1;
             } else {
