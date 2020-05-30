@@ -54,10 +54,29 @@ public class PrintDuplicateElement {
         System.out.println("\n");
     }
 
-    //Solution 4
-    public static void printDuplicateMethod4(int []arr)
-    {
+    // Solution 4
+    public static void printDuplicateMethod4(int[] arr) {
+        int size = arr.length;
+        int[] count = new int[50];
+        int i;
+        for (i = 0; i < size; i++) {
+            count[i] = 0;
+        }
 
+        for (int j = 0; j < count.length; j++) {
+            System.out.print(count[j]+" ");
+        }
+        System.out.println("\n");
+
+        System.out.print(" \nRepeating elements are ");
+        for (i = 0; i < size; i++) {
+            if (count[arr[i]] == 1) {
+                System.out.print(" " + arr[i]);
+            } else {
+                count[arr[i]]++;
+            }
+        }
+        System.out.println("\n");
     }
 
     public static void main(String[] args) {
@@ -66,6 +85,7 @@ public class PrintDuplicateElement {
         printDuplicateMethod1(arr);
         printDuplicateMethod2(arr);
         printDuplicateMethod3(arr);
+        printDuplicateMethod4(arr);
 
         
     }
