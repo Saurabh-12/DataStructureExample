@@ -1,7 +1,13 @@
 package com.saurabh.data.structures.ArrayQuestion;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class ArrayQuestion {
 	
@@ -335,6 +341,66 @@ public int[] waveArrayUsingQuickSort(int arr[], int size)
 }
 
 //Q. 11.  Array
+//Find 2 or 3 or 4  max repeated or duplicate element of an array
+// i/p arr[] = {1,3,5,2,4,1,3,5,4,3,1,3,5,4,1,2,3,1,3,1,2,1,5,7,6,1}
+//max 2 repeated element o/p 1 (8 times), 3 (6 times)
+//max 3 repeated element 0/p
+
+public HashMap<Integer, Integer> findRepeatingElementInArray(int []arr, int size) {
+	HashMap<Integer,Integer>frequency = new HashMap<Integer,Integer>();
+	for (int i = 0; i < size; i++) {
+		if (frequency.containsKey(arr[i])) {
+			frequency.put(arr[i], frequency.get(arr[i])+1);
+		} else {
+			frequency.put(arr[i], 1);
+
+		}
+	}
+	return frequency;
+}
+
+// Q. 12 Array (additinal question based on Q.11)
+public void printMaxRepeatedElement(HashMap<Integer,Integer>freq)
+{
+	int maxValueInMap=(Collections.max(freq.values()));  // This will return max value in the HashMap
+
+        for (Map.Entry<Integer, Integer> entry : freq.entrySet()) {  // Iterate through HashMap
+            if (entry.getValue()==maxValueInMap) {
+                System.out.println(entry.getKey() +" --> "+entry.getValue());     // Print the key with max value
+            }
+        }
+}
+
+
+public void printRequestedNumberOfRepeatingElementinArray(HashMap<Integer,Integer>freq, int count) {
+	// Create a list from elements of HashMap
+	List<Map.Entry<Integer, Integer> > list = new LinkedList<Map.Entry<Integer, Integer> >(freq.entrySet());
+
+// Sort the list
+Collections.sort(list, new Comparator<Map.Entry<Integer, Integer> >() {
+ public int compare(Map.Entry<Integer, Integer> o1,Map.Entry<Integer, Integer> o2)
+ {
+	 return (o2.getValue()).compareTo(o1.getValue());
+ }
+});
+
+// put data from sorted list to hashmap
+HashMap<Integer, Integer> temp = new LinkedHashMap<Integer, Integer>();
+for (Map.Entry<Integer, Integer> aa : list) {
+ temp.put(aa.getKey(), aa.getValue());
+}
+
+int reqCount = 1;
+for (Map.Entry<Integer,Integer> entry : temp.entrySet()) {
+	if(reqCount<=count) {
+		System.out.println(entry.getKey()+ " --> "+entry.getValue());
+		reqCount++;
+	} else {
+		break;
+	}
+}
+
+}
 
 private void swap(int[] arr, int i, int j) {
 	int temp;

@@ -1,5 +1,11 @@
 package com.saurabh.data.structures.ArrayQuestion;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.swing.RowFilter.Entry;
+import javax.xml.stream.events.EntityDeclaration;
+
 public class TestArrayQuestion {
 	
 	public static void main(String[] args) {
@@ -51,7 +57,27 @@ public class TestArrayQuestion {
 		int arrsN [] = arrQuestionObj.waveArrayUsingQuickSort(arr8, arr8.length);
 		arrQuestionObj.printArray(arrsN);
 		
-		
+		//Find repeated element count in Array
+		System.out.println("------------------- Repeated Element Count in Array------------------");
+		int arr9[] = {1,3,5,2,4,1,3,5,4,3,1,3,5,4,1,2,3,1,3,1,2,1,5,7,6,1};
+		int arr9Size = arr9.length;
+		HashMap<Integer,Integer>repeation = arrQuestionObj.findRepeatingElementInArray(arr9, arr9Size);
+		System.out.println("Below is the repeation frequency");
+		for (Map.Entry<Integer,Integer>entry : repeation.entrySet()) {
+			System.out.println(entry.getKey() + " --> "+entry.getValue());
+		}
+
+		// Find max Repeated element key and values
+		System.out.println("----------------Print max repeated Element in Array------------------");
+		arrQuestionObj.printMaxRepeatedElement(repeation);
+
+		// find 2 or 3 or 5 maximum repeated element
+		// if 2 then in above example 1 -->8 and 3 -->6
+		System.out.println("----------------Print requested number of max repeated Element in Array------------------");
+		arrQuestionObj.printRequestedNumberOfRepeatingElementinArray(repeation, 3);
+
+
+
 	}
 
 }
